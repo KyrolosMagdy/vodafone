@@ -22,7 +22,8 @@ export const StyledCallToAction = styled(Button)(({ theme }) => ({
 }));
 
 export const StyledVodafoneLogo = styled('img')(({ theme }) => ({
-    width: '8rem'
+    width: '8rem',
+    cursor: 'pointer'
 }));
 
 export const StyledToolbar = styled(Toolbar)(({ theme }) => ({
