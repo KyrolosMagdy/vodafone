@@ -42,7 +42,6 @@ declare module '@mui/material/styles/createPalette' {
 }
 
 const vodafoneRed = '#e60000';
-const vodafoneSilver = '#4a4d4e';
 
 export const theme = createTheme({
   status: {
@@ -50,19 +49,17 @@ export const theme = createTheme({
   },
   palette: {
     primary: {
-      // Purple and green play nicely together.
       main: '#ffffff',
     },
     secondary: {
-      // This is green.A700 as hex.
       main: vodafoneRed,
     },
     common: {
       silver: '#C0C0C0',
       green: '#2F8E89',
       openBlue: '#D5E9F6',
-      vodafoneRed,
-      vodafoneSilver,
+      vodafoneRed: vodafoneRed,
+      vodafoneSilver: '#4a4d4e',
     },
   },
   typography: {
