@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Grid from '@mui/material/Grid';
 
 import TaskManager from '../components/taskManager/TaskManager'; 
+import { useAppDispatch } from '../app/hooks';
+import { fetchTasksAsync } from '../features/tasks/taskSlice';
+import { fetchUsersAsync } from '../features/users/usersSlice';
 
 const MainPage = (): React.ReactElement => {
-    
+    const dispatch = useAppDispatch()
     // id: string;
     // avatar: string;
     // name: string;
     // assignedTasks: Task[]
+    useEffect(() => {
+        dispatch(fetchTasksAsync())
+        dispatch(fetchUsersAsync())
+    }, [])
 
     const firstCaseTasks = [
         {
