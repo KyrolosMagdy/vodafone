@@ -2,12 +2,16 @@ import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import { Typography } from '@mui/material';
 
-export const StyledCardWrapper = styled(Card)(({ theme }) => ({
-    margin: '0.5rem',
+export const StyledContainer = styled(Card)(({ theme }) => ({
     backgroundColor: theme.palette.common.silver,
+    padding: '6px',
+    color: theme.palette.common.white,
+    margin: '0.5rem',
+}));
+
+export const StyledCardWrapper = styled('div')(({ theme }) => ({
     color: theme.palette.common.white,
     display: 'flex',
-    padding: '6px',
     justifyContent: 'space-between',
     alignItems: 'center'
 }));
@@ -21,5 +25,6 @@ export const StyledCardTitle = styled(Typography)(({ theme }) => ({
 }));
 
 export const StyledCardDate = styled(Typography)(({ theme }) => ({
-    color: theme.palette.common.white
+    color: theme.palette.common.white,
+    fontSize: '12px'
 }));

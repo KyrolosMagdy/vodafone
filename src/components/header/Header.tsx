@@ -2,6 +2,8 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 
+import { toggleSigninModal } from '../../features/users/usersSlice';
+
 import {
   StyledHeaderWrapper,
   StyledCallToAction,
@@ -9,6 +11,7 @@ import {
   StyledToolbar
 } from './HeaderStyled';
 import VodefoneLogo from '../../assets/vodafone.svg';
+import { useAppDispatch } from '../../app/hooks';
 
 interface Props {
   /**
@@ -36,13 +39,14 @@ function ElevationScroll(props: Props) {
 }
 
 const HeaderComponent = (): React.ReactElement => {
+  const dispatch = useAppDispatch();
   return (
     <Box sx={{ flexGrow: 1 }}>
       <ElevationScroll>
         <StyledHeaderWrapper position='static'>
           <StyledToolbar>
             <StyledVodafoneLogo src={VodefoneLogo} alt='logo' />
-            <StyledCallToAction>Login</StyledCallToAction>
+            <StyledCallToAction onClick={() => dispatch(toggleSigninModal())}>Login</StyledCallToAction>
           </StyledToolbar>
         </StyledHeaderWrapper>
       </ElevationScroll>

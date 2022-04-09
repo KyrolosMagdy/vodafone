@@ -1,17 +1,16 @@
 export interface User {
-    id: string;
+    id: number;
     avatar: string;
     name: string;
-    assignedTasks: string[]
 }
 
 export interface Task {
-    id: string;
+    id: number;
+    status: number;
     title: string;
     description: string;
-    status: string;
-    createdBy: User;
-    updatedBy: User;
     createdAt: string;
     updatedAt: string;
-}
+    createdBy: number;
+    assignedTo: number;
+}       
