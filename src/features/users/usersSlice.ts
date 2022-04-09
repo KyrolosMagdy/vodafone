@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../../app/store';
 import { fetchAllUsers } from './usersApi';
 
@@ -40,5 +40,8 @@ export const usersSlice = createSlice({
             })
     }
 });
+
+export const selectUserLoadingStatus = (state: RootState) => state.user.status;
+export const selectAllUsers = (state: RootState) => state.user.status;
 
 export default usersSlice.reducer;
