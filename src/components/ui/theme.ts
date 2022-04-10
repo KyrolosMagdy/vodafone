@@ -49,7 +49,7 @@ export const theme = createTheme({
   },
   palette: {
     primary: {
-      main: '#ffffff',
+      main: '#C0C0C0',
     },
     secondary: {
       main: vodafoneRed,
